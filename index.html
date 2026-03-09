@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<title>Web App</title>
+</head>
+
+<body>
+
+<h2>Buyurtma forma</h2>
+
+<input id="name" placeholder="Ismingiz">
+
+<br><br>
+
+<button onclick="sendData()">Yuborish</button>
+
+<script>
+
+let tg = window.Telegram.WebApp
+
+tg.expand()
+
+function sendData(){
+
+    let name = document.getElementById("name").value
+
+    let data = {
+        name: name
+    }
+
+    tg.sendData(JSON.stringify(data))
+
+}
+
+</script>
+
+</body>
+</html>
