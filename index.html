@@ -10,13 +10,11 @@
 
 <body>
 
-<h2>Buyurtma forma</h2>
+<h2>Telegram shop</h2>
 
-<input id="name" placeholder="Ismingiz">
+<button onclick="order()">Buyurtma qilish</button>
 
 <br><br>
-
-<button onclick="sendData()">Yuborish</button>
 
 <script>
 
@@ -24,15 +22,11 @@ let tg = window.Telegram.WebApp
 
 tg.expand()
 
-function sendData(){
+function order(){
 
-    let name = document.getElementById("name").value
-
-    let data = {
-        name: name
-    }
-
-    tg.sendData(JSON.stringify(data))
+    tg.sendData(JSON.stringify({
+    product:"Laptop"
+    }))
 
 }
 
