@@ -10,7 +10,7 @@
 
 <body>
 
-<h2>Telegram shop</h2>
+<h2>Telegram shop 1</h2>
 
 <button type="button" onclick="order()">Buyurtma qilish</button>
 
@@ -19,14 +19,17 @@
 <script>
 
 const tg = window.Telegram.WebApp
-tg.expand()
+
+alert("tg object: " + tg)
 
 function order(){
-    alert("clicked")
 
-    tg.sendData(JSON.stringify({
-        product: "Laptop"
-    }))
+alert("clicked")
+
+tg.sendData(JSON.stringify({
+product:"Laptop"
+}))
+
 }
 
 
