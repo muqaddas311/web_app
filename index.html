@@ -12,23 +12,23 @@
 
 <h2>Telegram shop</h2>
 
-<button onclick="order()">Buyurtma qilish</button>
+<button type="button" onclick="order()">Buyurtma qilish</button>
 
 <br><br>
 
 <script>
 
-let tg = window.Telegram.WebApp
-
+const tg = window.Telegram.WebApp
 tg.expand()
 
 function order(){
+    alert("clicked")
 
     tg.sendData(JSON.stringify({
-    product:"Laptop"
+        product: "Laptop"
     }))
-
 }
+
 
 </script>
 
