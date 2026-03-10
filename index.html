@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
-
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-<title>Web App</title>
 </head>
 
 <body>
 
-<h2>Telegram shop 1</h2>
+<h2>Telegram shop 2</h2>
 
 <button type="button" onclick="order()">Buyurtma qilish</button>
-
-<br><br>
 
 <script>
 
 const tg = window.Telegram.WebApp
 
-alert("tg object: " + tg)
+tg.ready()
+tg.expand()
 
 function order(){
 
 alert("clicked")
 
 tg.sendData(JSON.stringify({
-product:"Laptop"
+product: "Laptop"
 }))
 
 }
-
 
 </script>
 
